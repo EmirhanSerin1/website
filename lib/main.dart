@@ -23,7 +23,7 @@ class MyApp extends StatelessWidget {
               primarySwatch: Colors.grey,
               textTheme: TextTheme(
                 headline3: TextStyle(color: Colors.black, fontSize: 90.sp),
-                headline6: const TextStyle(color: Colors.black),
+                headline6: TextStyle(color: Colors.black, fontSize: 38.sp),
               )),
           home: const HomePage(),
         );
