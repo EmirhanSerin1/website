@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 
 class CustomAppBar extends StatelessWidget {
@@ -20,9 +19,11 @@ class CustomAppBar extends StatelessWidget {
     );
   }
 
-  Padding textButton(String text) =>
-      Padding(
+  Padding textButton(String text) => Padding(
         padding: const EdgeInsets.only(right: 50),
-        child: TextButton(onPressed: () {}, child: Text(text)),
+        child: TextButton(
+          onPressed: () {},
+          child: Text(text),
+        ),
       );
 }
