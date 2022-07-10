@@ -19,8 +19,8 @@ class Introduction extends StatelessWidget {
               Text("Flutter Developer.",
                   style: Theme.of(context).textTheme.headline3),
               const SizedBox(height: 50),
-              Text("Computer Engineering ",
-                  style: Theme.of(context).textTheme.headline3),
+              Text("Studying Computer Engineering",
+                  style: Theme.of(context).textTheme.headline6),
             ],
           )
         ],
