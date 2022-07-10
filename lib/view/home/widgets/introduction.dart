@@ -1,3 +1,4 @@
+import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
 import 'package:portfolio/view/home/widgets/SMW_button.dart';
 
@@ -14,11 +15,47 @@ class Introduction extends StatelessWidget {
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Text("Hi,", style: Theme.of(context).textTheme.headline3),
-              Text("I'm Emirhan.",
-                  style: Theme.of(context).textTheme.headline3),
-              Text("Flutter Developer.",
-                  style: Theme.of(context).textTheme.headline3),
+              AnimatedTextKit(
+                animatedTexts: [
+                  TypewriterAnimatedText(
+                    'Hi.',
+                    textStyle: Theme.of(context).textTheme.headline3,
+                    speed: const Duration(milliseconds: 80),
+                  ),
+                ],
+                totalRepeatCount: 1,
+                pause: const Duration(milliseconds: 0),
+                displayFullTextOnTap: true,
+                stopPauseOnTap: true,
+              ),
+              AnimatedTextKit(
+                animatedTexts: [
+                  TypewriterAnimatedText(
+                    "I'm Emirhan.",
+                    textStyle: Theme.of(context).textTheme.headline3,
+                    speed: const Duration(milliseconds: 80),
+                  ),
+                ],
+                totalRepeatCount: 1,
+                pause: const Duration(milliseconds: 0),
+                displayFullTextOnTap: true,
+                stopPauseOnTap: true,
+              ),
+              AnimatedTextKit(
+                animatedTexts: [
+                  TypewriterAnimatedText(
+                    "Flutter Developer.",
+                    textStyle: Theme.of(context).textTheme.headline3,
+                    speed: const Duration(milliseconds: 80),
+                  ),
+                ],
+                totalRepeatCount: 1,
+                pause: const Duration(milliseconds: 0),
+                displayFullTextOnTap: true,
+                stopPauseOnTap: true,
+              ),
+              
+             
               const SizedBox(height: 40),
               Text(
                 "Studying Computer Engineering.",
