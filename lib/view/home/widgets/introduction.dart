@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:portfolio/view/home/widgets/SMW_button.dart';
 
 class Introduction extends StatelessWidget {
   const Introduction({Key? key}) : super(key: key);
@@ -18,9 +19,16 @@ class Introduction extends StatelessWidget {
                   style: Theme.of(context).textTheme.headline3),
               Text("Flutter Developer.",
                   style: Theme.of(context).textTheme.headline3),
-              const SizedBox(height: 50),
-              Text("Studying Computer Engineering",
-                  style: Theme.of(context).textTheme.headline6),
+              const SizedBox(height: 40),
+              Text(
+                "Studying Computer Engineering.",
+                style: Theme.of(context)
+                    .textTheme
+                    .headline6!
+                    .copyWith(color: Colors.grey.shade600),
+              ),
+              const SizedBox(height: 60),
+              const SeeMyWorksButton(),
             ],
           )
         ],

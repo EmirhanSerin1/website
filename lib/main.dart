@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:portfolio/view/home/home_page.dart';
 
 void main() {
@@ -10,17 +11,23 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: 'Portfolio',
-      theme: ThemeData(
-        primarySwatch: Colors.grey,
-        textTheme:const TextTheme(
-        headline3: TextStyle(color: Colors.black),
-        headline6: TextStyle(color: Colors.black),
-        )
-      ), 
-      home: const HomePage(),
+    return ScreenUtilInit(
+      designSize: const Size(1080, 1920),
+      minTextAdapt: true,
+      splitScreenMode: true,
+      builder: (context, child) {
+        return MaterialApp(
+          debugShowCheckedModeBanner: false,
+          title: 'Portfolio',
+          theme: ThemeData(
+              primarySwatch: Colors.grey,
+              textTheme: TextTheme(
+                headline3: TextStyle(color: Colors.black, fontSize: 90.sp),
+                headline6: const TextStyle(color: Colors.black),
+              )),
+          home: const HomePage(),
+        );
+      },
     );
   }
 }
