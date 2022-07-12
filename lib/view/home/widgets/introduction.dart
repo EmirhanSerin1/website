@@ -13,6 +13,7 @@ class Introduction extends StatelessWidget {
           horizontal: MediaQuery.of(context).size.width * 1 / 7),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -57,22 +58,133 @@ class Introduction extends StatelessWidget {
                 stopPauseOnTap: true,
               ),
               const SizedBox(height: 40),
-              Text(
-                "Studying Computer Engineering.",
-                style: Theme.of(context)
-                    .textTheme
-                    .headline6!
-                    .copyWith(color: Colors.grey.shade600),
+              AnimatedTextKit(
+                animatedTexts: [
+                  WavyAnimatedText(
+                    "Studying Computer Engineering.",
+                    textStyle: Theme.of(context)
+                        .textTheme
+                        .headline6!
+                        .copyWith(color: Colors.grey.shade600),
+                    speed: const Duration(milliseconds: 80),
+                  ),
+                ],
+                totalRepeatCount: 1,
+                pause: const Duration(milliseconds: 0),
+                displayFullTextOnTap: true,
+                stopPauseOnTap: true,
               ),
               const SizedBox(height: 60),
               const SeeMyWorksButton(),
             ],
           ),
-          Container(
-            constraints: BoxConstraints(maxWidth: 400.w, minHeight: 600.h),
-            child: Text(
-              "I am a hardworking Computer Engineer Student who works mostly with Flutter and Java. I've been making Mobile Applications by Flutter for 2+ years. I like to learn new things and improve myself everytime. I'm confident in my UI/UX design and Frontend skills. I am working with Rest API, MVVM, State Management(GetX, Provider), Local Databases(SQLite, SQL) and Firebase. I believe that working develops me, so my life is between work, sports, school and extra courses. Working 55+ hours in a week while studying is not a problem for me because I manage this really well. My determination and discipline are the basis of my success. I should have an internship for finishing my University. That's why I am looking for an intern offer.",
-              style: Theme.of(context).textTheme.headline6,
+          const SizedBox(width: 100),
+          RepaintBoundary(
+            child: Container(
+              constraints: BoxConstraints(maxWidth: 400.w, minHeight: 200.h),
+              child: Row(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  AnimatedTextKit(
+                    animatedTexts: [
+                      ScaleAnimatedText(
+                        "Flutter",
+                        textStyle: Theme.of(context).textTheme.headline2,
+                      ),
+                      ScaleAnimatedText(
+                        "Dart",
+                        textStyle: Theme.of(context).textTheme.headline2,
+                      ),
+                      ScaleAnimatedText(
+                        "Provider",
+                        textStyle: Theme.of(context).textTheme.headline2,
+                      ),
+                      ScaleAnimatedText(
+                        "MVVM",
+                        textStyle: Theme.of(context).textTheme.headline2,
+                      ),
+                      ScaleAnimatedText(
+                        "Android",
+                        textStyle: Theme.of(context).textTheme.headline2,
+                      ),
+                      ScaleAnimatedText(
+                        "MVC",
+                        textStyle: Theme.of(context).textTheme.headline2,
+                      ),
+                      ScaleAnimatedText(
+                        "Getx",
+                        textStyle: Theme.of(context).textTheme.headline2,
+                      ),
+                      ScaleAnimatedText(
+                        "Riverpod",
+                        textStyle: Theme.of(context).textTheme.headline2,
+                      ),
+                      ScaleAnimatedText(
+                        "Firebase",
+                        textStyle: Theme.of(context).textTheme.headline2,
+                      ),
+                      ScaleAnimatedText(
+                        "SQL",
+                        textStyle: Theme.of(context).textTheme.headline2,
+                      ),
+                      ScaleAnimatedText(
+                        "SQLite",
+                        textStyle: Theme.of(context).textTheme.headline2,
+                      ),
+                      ScaleAnimatedText(
+                        "Rest API",
+                        textStyle: Theme.of(context).textTheme.headline2,
+                      ),
+                      ScaleAnimatedText(
+                        "Git",
+                        textStyle: Theme.of(context).textTheme.headline2,
+                      ),
+                      ScaleAnimatedText(
+                        "Git",
+                        textStyle: Theme.of(context).textTheme.headline2,
+                      ),
+                      ScaleAnimatedText(
+                        "Git",
+                        textStyle: Theme.of(context).textTheme.headline2,
+                      ),
+                      ScaleAnimatedText(
+                        "TDD",
+                        textStyle: Theme.of(context).textTheme.headline2,
+                      ),
+                      ScaleAnimatedText(
+                        "Java",
+                        textStyle: Theme.of(context).textTheme.headline2,
+                      ),
+                      ScaleAnimatedText(
+                        "Clean Code",
+                        textStyle: Theme.of(context).textTheme.headline2,
+                      ),
+                      ScaleAnimatedText(
+                        "Atomic Design",
+                        textStyle: Theme.of(context).textTheme.headline2,
+                      ),
+                      ScaleAnimatedText(
+                        "Critical Thinking",
+                        textStyle: Theme.of(context).textTheme.headline2,
+                      ),
+                      ScaleAnimatedText(
+                        "Team Player",
+                        textStyle: Theme.of(context).textTheme.headline2,
+                      ),
+                      ScaleAnimatedText(
+                        "UI/UX Designing",
+                        textStyle: Theme.of(context).textTheme.headline2,
+                      ),
+          
+                    ],
+                    totalRepeatCount: 100,
+                    pause: const Duration(milliseconds: 0),
+                    displayFullTextOnTap: true,
+                    stopPauseOnTap: true,
+                  ),
+                ],
+              ),
             ),
           ),
         ],
@@ -80,3 +192,6 @@ class Introduction extends StatelessWidget {
     );
   }
 }
+/*
+
+*/

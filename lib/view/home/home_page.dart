@@ -3,6 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:portfolio/view/home/widgets/custom_app_bar.dart';
 import 'package:portfolio/view/home/widgets/introduction.dart';
 import 'package:portfolio/view/home/widgets/scroll_down.dart';
+import 'package:portfolio/view/home/widgets/short_text_FW.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 
 class HomePage extends StatelessWidget {
@@ -26,7 +27,7 @@ class HomePage extends StatelessWidget {
           width: MediaQuery.of(context).size.width,
           height: MediaQuery.of(context).size.height,
           child: ColoredBox(
-            color: Colors.grey.shade50,
+            color: Colors.grey.shade100,
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.end,
               children: [
@@ -37,7 +38,26 @@ class HomePage extends StatelessWidget {
               ],
             ),
           ),
-        )
+        ),
+        SizedBox(
+          width: MediaQuery.of(context).size.width,
+          height: MediaQuery.of(context).size.height,
+          child: ColoredBox(
+            color: Colors.white,
+            child: Padding(
+              padding: EdgeInsets.symmetric(
+          horizontal: MediaQuery.of(context).size.width * 1 / 7),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  SizedBox(height: 600.h),
+                  const ShortTextForWorks(),
+                ],
+              ),
+            ),
+          ),
+        ),
       ],
     );
   }
