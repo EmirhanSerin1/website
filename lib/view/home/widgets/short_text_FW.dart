@@ -6,9 +6,18 @@ class ShortTextForWorks extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Text(
-      "Skill Tree.",
-      style: Theme.of(context).textTheme.headline3,
+    return AnimatedTextKit(
+      animatedTexts: [
+        TyperAnimatedText(
+          "Skill Tree.",
+          textStyle: Theme.of(context).textTheme.headline3,
+          speed: const Duration(milliseconds: 150),
+        ),
+      ],
+      totalRepeatCount: 30,
+      pause: const Duration(milliseconds: 200),
+      displayFullTextOnTap: true,
+      stopPauseOnTap: true,
     );
   }
 }

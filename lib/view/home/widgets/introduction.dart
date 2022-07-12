@@ -31,18 +31,20 @@ class Introduction extends StatelessWidget {
                 displayFullTextOnTap: true,
                 stopPauseOnTap: true,
               ),
-              AnimatedTextKit(
-                animatedTexts: [
-                  TypewriterAnimatedText(
-                    "I'm Emirhan.",
-                    textStyle: Theme.of(context).textTheme.headline3,
-                    speed: const Duration(milliseconds: 80),
-                  ),
-                ],
-                totalRepeatCount: 1,
-                pause: const Duration(milliseconds: 0),
-                displayFullTextOnTap: true,
-                stopPauseOnTap: true,
+              RepaintBoundary(
+                child: AnimatedTextKit(
+                  animatedTexts: [
+                    TypewriterAnimatedText(
+                      "I'm Emirhan.",
+                      textStyle: Theme.of(context).textTheme.headline3,
+                      speed: const Duration(milliseconds: 80),
+                    ),
+                  ],
+                  totalRepeatCount: 1,
+                  pause: const Duration(milliseconds: 0),
+                  displayFullTextOnTap: true,
+                  stopPauseOnTap: true,
+                ),
               ),
               AnimatedTextKit(
                 animatedTexts: [
@@ -79,14 +81,14 @@ class Introduction extends StatelessWidget {
             ],
           ),
           const SizedBox(width: 100),
-          RepaintBoundary(
-            child: Container(
-              constraints: BoxConstraints(maxWidth: 400.w, minHeight: 200.h),
-              child: Row(
-                crossAxisAlignment: CrossAxisAlignment.center,
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  AnimatedTextKit(
+          Container(
+            constraints: BoxConstraints(maxWidth: 400.w, minHeight: 200.h),
+            child: Row(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                RepaintBoundary(
+                  child: AnimatedTextKit(
                     animatedTexts: [
                       ScaleAnimatedText(
                         "Flutter",
@@ -176,15 +178,15 @@ class Introduction extends StatelessWidget {
                         "UI/UX Designing",
                         textStyle: Theme.of(context).textTheme.headline2,
                       ),
-          
+                          
                     ],
                     totalRepeatCount: 100,
                     pause: const Duration(milliseconds: 0),
                     displayFullTextOnTap: true,
                     stopPauseOnTap: true,
                   ),
-                ],
-              ),
+                ),
+              ],
             ),
           ),
         ],
