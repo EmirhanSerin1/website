@@ -24,6 +24,7 @@ class MyApp extends StatelessWidget {
               textTheme: TextTheme(
                 headline3: TextStyle(color: Colors.black, fontSize: 90.sp),
                 headline6: TextStyle(color: Colors.black, fontSize: 38.sp),
+                headline2: TextStyle(color: Colors.black, fontSize: 100.sp),
               )),
           home: const HomePage(),
         );
