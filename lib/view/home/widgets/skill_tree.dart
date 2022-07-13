@@ -317,6 +317,7 @@ class SkillTreeMobile extends StatelessWidget {
               SizedBox(height: 300.h),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Column(
                     children: [
@@ -332,7 +333,6 @@ class SkillTreeMobile extends StatelessWidget {
                       skillItem(context, "assets/skill_tree/sqll.png", "SQL"),
                       SizedBox(height: 80.7.h),
                       skillItem(context, "assets/skill_tree/git.png", "Git"),
-                      SizedBox(height: 80.7.h),
                       skillItemWithoutImage(context, "Provider"),
                       skillItemWithoutImage(context, "GetX"),
                       skillItemWithoutImage(context, "Problem Solving"),
@@ -357,7 +357,6 @@ class SkillTreeMobile extends StatelessWidget {
                       SizedBox(height: 80.7.h),
                       skillItem(
                           context, "assets/skill_tree/SQLite.png", "SQLite"),
-                      SizedBox(height: 80.7.h),
                       skillItemWithoutImage(context, "MVC"),
                       skillItemWithoutImage(context, "REST API"),
                       skillItemWithoutImage(context, "Code Reusability"),
