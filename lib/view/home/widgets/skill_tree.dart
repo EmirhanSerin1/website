@@ -300,10 +300,10 @@ class SkillTreeMobile extends StatelessWidget {
       child: ColoredBox(
         color: Colors.white,
         child: Padding(
-          padding: EdgeInsets.only(left: 55.w, right: 55.w),
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.start,
-            crossAxisAlignment: CrossAxisAlignment.center,
+          padding: EdgeInsets.only(left: 55.w, right: 55.w, bottom: 50.w),
+          child: ListView(
+            shrinkWrap: true,
+            physics: ScrollPhysics(),
             children: [
               Column(
                 crossAxisAlignment: CrossAxisAlignment.center,
@@ -316,10 +316,10 @@ class SkillTreeMobile extends StatelessWidget {
                 ],
               ),
               SizedBox(height: 300.h),
-              Column(
+              Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Row(
+                  Column(
                     children: [
                       skillItem(
                           context, "assets/skill_tree/flutter.png", "Flutter"),
@@ -331,6 +331,7 @@ class SkillTreeMobile extends StatelessWidget {
                           context, "assets/skill_tree/andro.png", "Android"),
                       SizedBox(height: 80.7.h),
                       skillItem(context, "assets/skill_tree/sqll.png", "SQL"),
+                      SizedBox(height: 80.7.h),
                       skillItem(context, "assets/skill_tree/git.png", "Git"),
                       SizedBox(height: 80.7.h),
                       skillItemWithoutImage(context, "Provider"),
@@ -339,14 +340,17 @@ class SkillTreeMobile extends StatelessWidget {
                       skillItemWithoutImage(context, "Riverpod"),
                       skillItemWithoutImage(context, "MVVM"),
                       skillItemWithoutImage(context, "Critical Thinking"),
+                      skillItemWithoutImage(context, "Solid Thinking"),
+                      skillItemWithoutImage(context, "Provider"),
                     ],
                   ),
-                  Row(
+                  Column(
                     children: [
                       skillItem(context, "assets/skill_tree/dart.png", "Dart"),
                       SizedBox(height: 80.7.h),
                       skillItem(context, "assets/skill_tree/vscode.png",
                           "Visual Studio Code"),
+                      SizedBox(height: 80.7.h),
                       skillItem(context, "assets/skill_tree/java.png", "Java"),
                       SizedBox(height: 80.7.h),
                       skillItem(context, "assets/skill_tree/as.png",
@@ -355,25 +359,18 @@ class SkillTreeMobile extends StatelessWidget {
                       skillItem(
                           context, "assets/skill_tree/SQLite.png", "SQLite"),
                       SizedBox(height: 80.7.h),
+                      skillItem(
+                          context, "assets/skill_tree/SQLite.png", "SQLite"),
                       skillItemWithoutImage(context, "MVC"),
                       skillItemWithoutImage(context, "REST API"),
                       skillItemWithoutImage(context, "Code Reusability"),
                       skillItemWithoutImage(context, "UI/UX Design"),
                       skillItemWithoutImage(context, "Solid Thinking"),
                       skillItemWithoutImage(context, "Provider"),
-                    ],
-                  ),
-                  Column(
-                    children: [
-                      skillItem(context, "assets/skill_tree/git.png", "Git"),
-                      SizedBox(height: 80.7.h),
-                      skillItem(
-                          context, "assets/skill_tree/SQLite.png", "SQLite"),
                       skillItemWithoutImage(context, "UI/UX Design"),
-                      skillItemWithoutImage(context, "Solid Thinking"),
-                      skillItemWithoutImage(context, "Provider"),
                     ],
                   ),
+
                 ],
               ),
             ],
@@ -387,8 +384,8 @@ class SkillTreeMobile extends StatelessWidget {
     return Column(
       children: [
         SizedBox(
-          height: 50,
-          width: 50.w,
+          height: 60,
+          width: 100.w,
           child: Image.asset(imagePath),
         ),
         const SizedBox(height: 5),

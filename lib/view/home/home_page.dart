@@ -14,7 +14,7 @@ class HomePage extends StatelessWidget {
     return Scaffold(
       body: ScreenTypeLayout(
         desktop: homePageDesktop(context),
-        tablet: homePageTablet(context),
+        tablet: homePageMobile(context),
         mobile: homePageMobile(context),
       ),
     );
@@ -88,7 +88,7 @@ class HomePage extends StatelessWidget {
             ),
           ),
         ),
-        const SkillTreeTablet(),
+        const SkillTreeMobile(),
         const Contact()
       ],
     );

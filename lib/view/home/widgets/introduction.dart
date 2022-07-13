@@ -99,10 +99,11 @@ class IntroductionTablet extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.only(left: 50.w, right: 50.w),
+      padding: EdgeInsets.only(left: 20.w, right: 20.w),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
+          
           Column(
             crossAxisAlignment: CrossAxisAlignment.center,  
             children: [
@@ -172,7 +173,7 @@ class IntroductionTablet extends StatelessWidget {
               const SeeMyWorksButton(),
             ],
           ),
-           SizedBox(height: 20.h),
+           SizedBox(height: 300.h), 
           const Skills(),
         ],
       ),

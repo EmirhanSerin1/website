@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-
+import 'dart:html' as html;
 class SeeMyWorksButton extends StatefulWidget {
   const SeeMyWorksButton({Key? key}) : super(key: key);
 
@@ -95,5 +95,6 @@ class _SeeMyWorksButtonState extends State<SeeMyWorksButton>
 
   void _tapUp(TapUpDetails details) {
     _controller.reverse();
+    html.window.open("https://github.com/EmirhanSerin1", "new tab");
   }
 }
