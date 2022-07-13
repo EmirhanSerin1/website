@@ -358,8 +358,6 @@ class SkillTreeMobile extends StatelessWidget {
                       skillItem(
                           context, "assets/skill_tree/SQLite.png", "SQLite"),
                       SizedBox(height: 80.7.h),
-                      skillItem(
-                          context, "assets/skill_tree/SQLite.png", "SQLite"),
                       skillItemWithoutImage(context, "MVC"),
                       skillItemWithoutImage(context, "REST API"),
                       skillItemWithoutImage(context, "Code Reusability"),
