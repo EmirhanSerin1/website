@@ -8,7 +8,7 @@ class ScrollDown extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.fromLTRB(8, 900.h.h, 8, 8),
+      padding: EdgeInsets.fromLTRB(8, 750.h.h, 8, 8),
       child: RotatedBox(
         quarterTurns: 1,
         child: Row(

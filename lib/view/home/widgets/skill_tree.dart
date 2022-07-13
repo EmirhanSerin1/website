@@ -296,14 +296,13 @@ class SkillTreeMobile extends StatelessWidget {
   Widget build(BuildContext context) {
     return SizedBox(
       width: MediaQuery.of(context).size.width,
-      height: MediaQuery.of(context).size.height,
       child: ColoredBox(
         color: Colors.white,
         child: Padding(
           padding: EdgeInsets.only(left: 55.w, right: 55.w, bottom: 50.w),
           child: ListView(
             shrinkWrap: true,
-            physics: ScrollPhysics(),
+            physics:const ScrollPhysics(),
             children: [
               Column(
                 crossAxisAlignment: CrossAxisAlignment.center,
